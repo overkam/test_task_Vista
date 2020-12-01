@@ -1,4 +1,21 @@
 .tags {
   display: flex;
-  justify-content: space-between;
+  height: 20px;
+  padding: 5px;
+  text-align: center;
+  color: rgb(70, 70, 70);
+  border-bottom: 1px solid grey;
+}
+.tags div {
+  text-align: left;
+}
+.tags_number {
+  width: 20%;
+}
+.tags_name {
+  width: 50%;
+}
+.tags_room,
+.tags_cause {
+  width: 30%;
 }

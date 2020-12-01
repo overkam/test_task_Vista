@@ -1,4 +1,17 @@
 .category {
-  background-color: rgb(185, 255, 226);
+  height: 40px;
+  background-color: rgb(173, 173, 173);
   display: flex;
+  border-bottom: 1px solid grey;
+}
+.category_item {
+  color: black;
+  text-decoration: none;
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+}
+a.category_item.active {
+  color: blue;
+  border-bottom: 2px solid blue;
 }

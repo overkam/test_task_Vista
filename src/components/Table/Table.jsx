@@ -12,7 +12,7 @@ const Table = (props) => {
       <Category state={props.state}/>
       <Tags />
       <Route path='/present' render = {() => <Present state={props.state}/>} />
-      {/* <Route path='/quitting' render = {() => <Quitting state={props.state}/>} /> */}
+      <Route path='/quitting' render = {() => <Quitting state={props.state}/>} />
     </div>
   );
 };

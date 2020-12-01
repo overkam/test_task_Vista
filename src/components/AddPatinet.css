@@ -1,0 +1,9 @@
+.patient-info_item div {
+  margin-left: 10px;
+  display: inline-block;
+  width: 250px;
+  border-bottom: 1px solid grey;
+}
+.patient-info_item {
+  margin-top: 10px;
+}

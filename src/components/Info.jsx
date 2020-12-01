@@ -6,7 +6,7 @@ const Info = (props) => {
   return (
     <div className='information'>
       <div className='title'>
-        Инфорация о пациенте
+        <p>Инфорация о пациенте</p>
       </div>
       <AddPatient state={props.state}/>
     </div>

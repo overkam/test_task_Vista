@@ -5,7 +5,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import store from "./store";
 
-export const renderTree = (state) => {
+export const renderTree = ({...state}) => {
   ReactDOM.render(
       <BrowserRouter>
         <App state={state}/>
@@ -14,7 +14,7 @@ export const renderTree = (state) => {
   );
 };
 
-store.getPatients()
+store.getPatients() 
 renderTree(store.getState());
 
 store.subscribe(renderTree);

@@ -4,11 +4,14 @@ import "./Patient.css";
 
 class Patient extends React.Component {
   getAge = (date) => {
-    return ((new Date().getTime() - new Date(date)) / (24 * 3600 * 365.25 * 1000)) | 0
-  }
+    return (
+      ((new Date().getTime() - new Date(date)) / (24 * 3600 * 365.25 * 1000)) |
+      0
+    );
+  };
 
-  onPatientClick = () => {
-    const age = this.getAge(this.props.data.birthDate)
+  onPatientClick = (e) => {
+    const age = this.getAge(this.props.data.birthDate);
     store.addPatient(
       this.props.data.firstName +
         " " +
@@ -18,6 +21,18 @@ class Patient extends React.Component {
       this.props.data.diagnosis,
       age
     );
+
+    if (document.querySelector('.patinet-active')) {document.querySelector('.patinet-active').classList.remove("patinet-active")}
+
+    if (
+      e.target.className === "patient_history" ||
+      e.target.className === "patient_name" ||
+      e.target.className === "patient_bed-or-cause"
+    ) {
+      e.target.parentElement.classList.add("patinet-active");
+    } else {
+      e.target.classList.add("patinet-active");
+    }
   };
 
   render() {
@@ -29,16 +44,16 @@ class Patient extends React.Component {
       birthDate,
       diagnosis,
       bedNumber,
-      cause
+      cause,
     } = this.props.data;
 
     return (
       <div className="patient" onClick={this.onPatientClick} id={historyNumber}>
-        <div>{historyNumber}</div>
-        <div>
+        <div className="patient_history">{historyNumber}</div>
+        <div className="patient_name">
           {firstName} {lastName} {patrName}
         </div>
-        <div>{bedNumber || cause}</div>
+        <div className="patient_bed-or-cause">{bedNumber || cause}</div>
       </div>
     );
   }

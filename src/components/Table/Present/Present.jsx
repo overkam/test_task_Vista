@@ -6,9 +6,7 @@ class Present extends React.Component {
 
   render() {
     let patients = this.props.state.presentPatients;
-
     return (
-      
       <div>
         {this.props.state.isLoading && <p>Loading...</p>}
         {Array.isArray(patients) && <Patients data={patients} /> }

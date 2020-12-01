@@ -15,7 +15,6 @@ let store = {
         return response.json();
       })
       .then((data) => {
-        console.log(data)
         this._state.presentPatients = data;
         this._state.isLoading = false;
       });

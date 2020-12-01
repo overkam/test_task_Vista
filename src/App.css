@@ -1,6 +1,4 @@
 .content {
   display: flex;
-  margin-top: 5px;
   justify-content: center;
-  height: 620px;
 }

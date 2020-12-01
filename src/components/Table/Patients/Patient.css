@@ -1,4 +1,22 @@
 .patient {
   display: flex;
-  justify-content: space-between;
+  padding: 5px;
+  height: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid grey;
+}
+.patient.patinet-active {
+  background-color: rgb(173, 173, 173);
+}
+.patient div {
+  text-align: left;
+}
+.patient_history {
+  width: 20%;
+}
+.patient_name {
+  width: 50%;
+}
+.patient_bed-or-cause {
+  width: 30%;
 }

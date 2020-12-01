@@ -5,10 +5,10 @@ import "./Tags.css";
 const Tags = () => {
   return (
     <div className="tags">
-      <div>№ ИБ</div>
-      <div>ФИО</div>
-      <Route path='/present' render = {() => <div>Палата</div>} />
-      <Route path='/quitting' render = {() => <div>Причина выбытия</div>} />
+      <div className="tags_number">№ ИБ</div>
+      <div className="tags_name">ФИО</div>
+      <Route path='/present' render = {() => <div className="tags_room">Палата</div>} />
+      <Route path='/quitting' render = {() => <div className="tags_cause">Причина выбытия</div>} />
     </div>
   );
 };
